@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <link rel="stylesheet" href="css/base.css">
+  <link rel="stylesheet" href="css/login.css">
+  <link rel="stylesheet" href="css/register.css">
+</head>
+<body>
+  <div class="login_boxtitle">
+    <a href="">
+      <img src="img/logobig.png" alt="">
+    </a>
+  </div>
+  <div class="login_banner">
+     <div class="login_main clear">
+       <img src="img/big.jpg" alt="">
+       <div class="login_box">
+         <div class="login_title clear">
+            <a class="title_email" id="email">邮箱注册</a>
+            <a class="title_phone" id="phone">手机号注册</a>
+         </div>
+         <!--邮箱注册-->
+         <div class="login_form1 hide" >
+           <form>
+             <input type="text" placeholder="请输入邮箱账号">
+             <input type="password" placeholder="设置密码">
+             <input type="password" placeholder="确认密码">
+           </form>
+         </div>
+          <!-- 手机号注册-->
+         <div class="login_form2 ">
+           <form>
+             <input type="text" placeholder="请输入手机号">
+             <input type="text" placeholder="请输入验证码">
+             <input type="password" placeholder="设置密码">
+             <input type="password" placeholder="确认密码">
+           </form>
+         </div>
+
+         <div class="login_links clear">
+           <label for="remember_me">
+             <input type="checkbox" id="remember_me"> 点击表示您同意商城《服务协议》
+           </label>
+         </div>
+         <div class="login_btn">
+           <input type="submit" value="注册">
+         </div>
+
+       </div>
+     </div>
+  </div>
+  <div class="footer">
+
+  </div>
+  <script>
+    var email=document.getElementById("email");
+    var phone=document.getElementById("phone");
+    var form1=email.parentNode.nextSibling;
+    var form2=email.parentNode.nextSibling.nextSibling;
+    email.onclick=function(e){
+      console.log(1);
+      e.stopPropagation();
+      console.log(form1);
+      form1.className="active";
+      form2.className="hide";
+    }
+    phone.onclick=function(e){
+      e.stopPropagation();
+       form1.className="hide";
+      form2.className="active";
+    }
+  </script>
+</body>
+</html>
